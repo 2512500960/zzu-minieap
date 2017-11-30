@@ -97,7 +97,7 @@ static void rjv3_set_v3_hash(uint8_t* hash_buf, ETH_EAP_FRAME* request) {
         _v3_buf = computeV4(request->content + sizeof(FRAME_HEADER) + 1, /* position of MD5-Value */
                             *(request->content + sizeof(FRAME_HEADER))); /* position of MD5-Value-Size */
     } else {
-        uint8_t _v3_pad[RJV3_PAD_SIZE] = {0};
+        uint8_t _v3_pad[RJV3_PAD_SIZE] = {0x21, 0x6A, 0x69, 0x65, 0x72, 0x75, 0x69, 0x39, 0x30, 0x30, 0x32, 0x70, 0x6D, 0x73, 0x75, 0x73};
         _v3_buf = computeV4(_v3_pad, RJV3_PAD_SIZE);
     }
     memmove(hash_buf, _v3_buf, 0x80);
@@ -278,7 +278,7 @@ static int rjv3_append_common_fields(PACKET_PLUGIN* this, LIST_ELEMENT** list, i
     uint8_t _local_mac[RJV3_SIZE_MAC];
     uint8_t _pwd_hash[RJV3_SIZE_PWD_HASH] = {0};
     char _sec_dns[INET6_ADDRSTRLEN] = {0};
-    uint8_t _misc_2[RJV3_SIZE_MISC_2] = {0x01};
+    uint8_t _misc_2[RJV3_SIZE_MISC_2] = {0x00};
     uint8_t _ll_ipv6[RJV3_SIZE_LL_IPV6] = {0};
     uint8_t _ll_ipv6_tmp[RJV3_SIZE_LL_IPV6_T] = {0};
     uint8_t _glb_ipv6[RJV3_SIZE_GLB_IPV6] = {0};
