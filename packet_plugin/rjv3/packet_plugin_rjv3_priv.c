@@ -298,13 +298,13 @@ static int rjv3_append_common_fields(PACKET_PLUGIN* this, LIST_ELEMENT** list, i
 
     rjv3_set_secondary_dns(_sec_dns, PRIV->fake_dns2);
 
-    rjv3_set_ipv6_addr(_ll_ipv6, _ll_ipv6_tmp, _glb_ipv6);
+    //rjv3_set_ipv6_addr(_ll_ipv6, _ll_ipv6_tmp, _glb_ipv6);
 
     rjv3_set_v3_hash(_v3_hash, PRIV->last_recv_packet);
 
     rjv3_set_service_name(_service, PRIV->service_name);
 
-    rjv3_set_hdd_serial(_hdd_ser, PRIV->fake_serial);
+    //rjv3_set_hdd_serial(_hdd_ser, PRIV->fake_serial);
 
 #define CHK_ADD(x) \
     _this_len = x; \
