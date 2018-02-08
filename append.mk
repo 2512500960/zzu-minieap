@@ -28,9 +28,15 @@ $($(LOCAL_MODULE)_PRIV_DEPS) : ${@:.d=.c}
 	@sed -i 's,^.*:,${@:.d=.o} $@ : ,g' $@
 
 # %.o %.d : *.c
+# This will cause regeneration of .d files. Do not do this when cleaning.
+ifneq "$(MAKECMDGOALS)" "clean"
 -include $($(LOCAL_MODULE)_PRIV_DEPS)
+endif
 
 .PHONY: $(LOCAL_MODULE)_clean
 $(LOCAL_MODULE)_clean:
 # Use patsubst to get correct filenames!
 	rm -f $($(patsubst %_clean,%,$@)_PRIV_OBJS) $($(patsubst %_clean,%,$@)_PRIV_DEPS)
+
+.PHONY: clean
+clean: $(LOCAL_MODULE)_clean
