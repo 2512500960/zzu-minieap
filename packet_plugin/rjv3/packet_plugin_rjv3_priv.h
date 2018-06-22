@@ -6,7 +6,8 @@
 #include "linkedlist.h"
 
 #include <stdint.h>
-
+#define RJV3_TYPE_ZZU 0x79
+#define RJV3_SIZE_ZZU 0x01   //unkown
 #define RJV3_TYPE_DHCP      0x18 /* 4 byte, DHCP disabled = 0, DHCP enabled = 0x00000001 MSB */
 #define RJV3_SIZE_DHCP      0x04
 
