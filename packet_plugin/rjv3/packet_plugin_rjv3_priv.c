@@ -28,7 +28,7 @@
 #ifdef __linux__
 #include <linux/hdreg.h>
 #endif
-
+static char zzu_unkown_type[]={0x02};
 #define IS_MD5_FRAME(frame) \
     (frame != NULL && frame->header->eapol_hdr.type[0] == EAP_PACKET \
         && frame->header->eap_hdr.type[0] == MD5_CHALLENGE)
@@ -335,7 +335,7 @@ static int rjv3_append_common_fields(PACKET_PLUGIN* this, LIST_ELEMENT** list, i
     CHK_ADD(append_rjv3_prop(list, RJV3_TYPE_MISC_7,   _misc_7,                sizeof(_misc_7)));
     CHK_ADD(append_rjv3_prop(list, RJV3_TYPE_OS_BITS,  _os_bits,               sizeof(_os_bits)));
     CHK_ADD(append_rjv3_prop(list, RJV3_TYPE_VER_STR,  (uint8_t*)_ver_str,    strlen(_ver_str) + 1)); // Zero terminated
-
+    CHK_ADD(append_rjv3_prop(list, RJV3_TYPE_ZZU,      (uint8_t*)(zzu_unkown_type) ,   1       ));
     return _len;
 }
 
