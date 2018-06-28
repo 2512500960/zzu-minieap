@@ -355,7 +355,7 @@ static void rjv3_append_priv_header(struct _packet_plugin* this, ETH_EAP_FRAME* 
     uint8_t _prog_name[RJV3_SIZE_PROG_NAME] = RJV3_PROG_NAME;
     append_to_frame(frame, _prog_name, sizeof(_prog_name));
 
-    uint8_t _version[4] = {0x01, 0x1f, 0x01, 0x02}; /* May be different */
+    uint8_t _version[4] = {0x01, 0x1e, 0x01, 0x02}; /* May be different */
     append_to_frame(frame, _version, sizeof(_version));
 }
 
