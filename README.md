@@ -1,16 +1,16 @@
 
-原作者：https://github.com/updateing
-加入了一个咱们学校的特有字段，修改成了咱们学校的版本号和反破解数组。等等。
+原作者：https://github.com/updateing <br> 
+加入了一个咱们学校的特有字段，修改成了咱们学校的版本号和反破解数组。等等。<br> 
 适用于郑州大学锐捷认证，8102年5月wlzx加了客户端检验之后搞的。minieap是适用于linux平台的客户端，修改过了原作者的minieap中的认证算法中的特殊数组，加上了特殊字段。pc端的，linux下直接编译即可。openwrt平台的，可以通过zzu-minieap-openwrt这个repo下的makefile交叉编译生成软件包，具体不会给我发邮件
 。
 
-编译方法：
-  For桌面linux系统（或者任何有自编译工具链的系统），
-   git clone https://github.com/25125000960/zzu-minieap.git
-   cd zzu-minieap
-   make 
-   chmod 777 minieap
-   cp minieap /usr/sbin
+编译方法：<br> 
+  For桌面linux系统（或者任何有自编译工具链的系统），<br> 
+   git clone https://github.com/25125000960/zzu-minieap.git <br> 
+   cd zzu-minieap <br> 
+   make <br> 
+   chmod 777 minieap <br> 
+   cp minieap /usr/sbin <br> 
     //开始认证吧
    
   For嵌入式linux系统，如openwrt 14.07+，去找路由器刷的固件的对应的sdk，从里面解压出来toolchain，
