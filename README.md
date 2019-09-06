@@ -3,8 +3,8 @@
 加入了一个咱们学校的特有字段，修改成了咱们学校的版本号和反破解数组。等等。<br> 
 适用于郑州大学锐捷认证，8102年5月wlzx加了客户端检验之后搞的。minieap是适用于linux平台的客户端，修改过了原作者的minieap中的认证算法中的特殊数组，加上了特殊字段。pc端的，linux下直接编译即可。openwrt平台的，可以通过zzu-minieap-openwrt这个repo下的makefile交叉编译生成软件包，具体不会的可以联系我。
 
-在这个仓库的release里面可以找到几个编译好的二进制文件，有padavan的，x64的，等等
-<br>https://github.com/2512500960/zzu-minieap/releases
+# 在这个仓库的release里面可以找到几个编译好的二进制文件，有padavan的，x64的，等等
+# <br>https://github.com/2512500960/zzu-minieap/releases
 
 编译方法：<br> 
   For桌面linux系统（或者任何有自编译工具链的系统），<br> 
