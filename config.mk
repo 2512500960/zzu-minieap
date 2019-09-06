@@ -30,7 +30,7 @@ CUSTOM_LDFLAGS :=
 CUSTOM_LIBS :=
 
 # Example for cross-compiling
-CC := miplse-linux-uclibc-gcc
+CC := mipsel-linux-uclibc-gcc
 # ENABLE_ICONV := true
 # CUSTOM_CFLAGS += -I/home/me/libiconv-1.14/include
 # CUSTOM_LIBS += /home/me/arm/libiconv.a
