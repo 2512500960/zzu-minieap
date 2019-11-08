@@ -253,9 +253,9 @@ static RESULT rjv3_process_success(struct _packet_plugin* this, ETH_EAP_FRAME* f
     if (IS_FAIL(rjv3_process_result_prop(frame))) {
         return FAILURE;
     }
-
-    //PR_INFO("正定时发送 Keep-Alive 报文以保持在线……");
-    //schedule_alarm(1, rjv3_send_keepalive_timed, this);
+    //2019.11.8：心跳功能原先是禁用的，今天开启
+    PR_INFO("正定时发送 Keep-Alive 报文以保持在线……");
+    schedule_alarm(1, rjv3_send_keepalive_timed, this);
     return SUCCESS;
 }
 
