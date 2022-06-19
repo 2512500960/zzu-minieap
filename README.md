@@ -10,6 +10,8 @@
 ## 在这个仓库的release里面可以找到几个编译好的二进制文件，有padavan的，x64的，等等，省的自己编译
 ## <br>https://github.com/2512500960/zzu-minieap/releases
 
+# 个别松园宿舍，可能需要增加-a 1参数
+
 编译方法：<br> 
   For桌面linux系统（或者任何有自编译工具链的系统），<br> 
   &ensp; apt install make gcc <br>
